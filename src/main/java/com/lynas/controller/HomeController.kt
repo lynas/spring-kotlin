@@ -21,7 +21,7 @@ class HomeController{
 
     @PostMapping("/addPerson")
     fun addPerson(@ModelAttribute person: Person): String {
-        print(person)
+        print(person.toString())
         return "redirect:/"
     }
 }
