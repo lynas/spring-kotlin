@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{template/secure}"
+      lang="en">
+<body>
+<div layout:fragment="page-content">
+    <div>
+        <table>
+            <tr>
+                <td>
+                    Name
+                </td>
+                <td>
+                    <span th:text="${employee.person.name}">def val</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Employee ID
+                </td>
+                <td>
+                    <span th:text="${employee.employeeId}">def val</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Department
+                </td>
+                <td>
+                    <span th:text="${employee.department}">def val</span>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+
+</div>
+</body>
+</html>
