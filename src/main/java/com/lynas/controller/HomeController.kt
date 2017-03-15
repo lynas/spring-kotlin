@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.ModelAttribute
+import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.PostMapping
 
 /**
@@ -16,7 +17,8 @@ import org.springframework.web.bind.annotation.PostMapping
 class HomeController {
 
     @GetMapping(value = "/")
-    fun home(): String {
+    fun home(model: Model): String {
+        model.addAttribute("varName", "var")
         return "home"
     }
 
@@ -32,5 +34,11 @@ class HomeController {
         print(employee.toString())
         model.addAttribute("employee", employee)
         return "employee"
+    }
+
+
+    @GetMapping("/anotherPage/{varName}")
+    fun anotherPage(@PathVariable varName: String): String {
+        return "anotherPage"
     }
 }
