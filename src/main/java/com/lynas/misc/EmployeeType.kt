@@ -6,5 +6,7 @@ package com.lynas.misc
 
 
 enum class EmployeeType {
-    CONTRACT, PERMANENT, GUEST
+    CONTRACT,
+    PERMANENT,
+    GUEST
 }

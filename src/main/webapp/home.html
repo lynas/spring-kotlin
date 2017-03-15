@@ -5,37 +5,88 @@
       lang="en">
 <body>
 <div layout:fragment="page-content">
-    Home
+    <div>
+        <form action="/addPerson" method="post">
+            <table>
+                <tr>
+                    <td>
+                        id
+                    </td>
+                    <td>
+                        <input type="text" name="id"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        name
+                    </td>
+                    <td>
+                        <input type="text" name="name"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
 
-    <form action="/addPerson" method="post">
-        <table>
-            <tr>
-                <td>
-                    id
-                </td>
-                <td>
-                    <input type="text" name="id"/>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    name
-                </td>
-                <td>
-                    <input type="text" name="name"/>
-                </td>
-            </tr>
-            <tr>
-                <td>
+                    </td>
+                    <td>
+                        <input type="submit" value="Submit"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div>
+        <form action="/addEmployee" method="post">
+            <table>
+                <tr>
+                    <td>
+                        Person Id
+                    </td>
+                    <td>
+                        <input type="text" name="person.id"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Person Name
+                    </td>
+                    <td>
+                        <input type="text" name="person.name"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        employeeId
+                    </td>
+                    <td>
+                        <input type="text" name="employeeId"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        department
+                    </td>
+                    <td>
+                        <select name="department">
+                            <option>CONTRACT</option>
+                            <option>PERMANENT</option>
+                            <option>GUEST</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
 
-                </td>
-                <td>
-                    <input type="submit" value="Submit"/>
-                </td>
-            </tr>
-        </table>
+                    </td>
+                    <td>
+                        <input type="submit" value="Submit"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
 
-    </form>
+
 </div>
 </body>
 </html>

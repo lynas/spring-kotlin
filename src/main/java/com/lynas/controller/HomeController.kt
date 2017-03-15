@@ -1,5 +1,6 @@
 package com.lynas.controller
 
+import com.lynas.model.Employee
 import com.lynas.model.Person
 import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.GetMapping
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping
  */
 
 @Controller
-class HomeController{
+class HomeController {
 
     @GetMapping(value = "/")
     fun home(): String {
@@ -22,6 +23,12 @@ class HomeController{
     @PostMapping("/addPerson")
     fun addPerson(@ModelAttribute person: Person): String {
         print(person.toString())
+        return "redirect:/"
+    }
+
+    @PostMapping("/addEmployee")
+    fun addEmployee(@ModelAttribute employee: Employee): String {
+        print(employee.toString())
         return "redirect:/"
     }
 }
