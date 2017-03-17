@@ -19,6 +19,13 @@ class HomeController {
     @GetMapping(value = "/")
     fun home(model: Model): String {
         model.addAttribute("varName", "var")
+        val personList = listOf(
+                Person(1, "name1"),
+                Person(2, "name2"),
+                Person(3, "name3"),
+                Person(4, "name4")
+        )
+        model.addAttribute("personList", personList)
         return "home"
     }
 

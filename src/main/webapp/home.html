@@ -90,6 +90,16 @@
         </form>
     </div>
 
+    <div>
+        <table>
+            <tr th:each="person: ${personList}">
+                <td th:text="${person.id}">id</td>
+                <td th:text="${person.name}">name</td>
+
+            </tr>
+        </table>
+    </div>
+
 
 </div>
 </body>
